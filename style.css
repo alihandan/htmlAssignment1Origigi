@@ -1,0 +1,343 @@
+/* Global Styles */
+body,
+html {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 1rem 2rem;
+    background-color: #343a40;
+}
+
+.navbar-logo img {
+    height: 25px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.15);
+    opacity: 0.9;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    background: url('judo.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.hero .btn {
+    background-color: #ffc107;
+    color: #000;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 193, 7, 0.5);
+}
+
+.hero .btn:hover {
+    background-color: #ffa000;
+    box-shadow: 0 12px 30px rgba(255, 193, 7, 0.7);
+    transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+#about p:hover {
+    transform: scale(1.05);
+    color: #ffc107;
+}
+
+/* Coaches Section */
+#coaches {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+}
+
+#coaches .col-md-4 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#coaches img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+#coaches img:hover {
+    transform: scale(1.1);
+}
+
+#coaches h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Gallery Section */
+#gallery {
+    background-color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+}
+
+.gallery-wrapper img.active {
+    opacity: 1;
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Video Section */
+#videos iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f0f0f0;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#contact .map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+/* Entrance Image */
+.entrance-image img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.entrance-image img:hover {
+    transform: scale(1.05);
+}
+
+.entrance-image .image-caption {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Povećani logo */
+.navbar-logo {
+    width: 70px;
+    /* Povećajte širinu loga */
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animacija kada korisnik klikne na logo */
+.navbar-logo:active {
+    background-color: yellow;
+    /* Pozadina postaje žuta prilikom klika */
+    transform: scale(1.1);
+    /* Malo uvećanje loga */
+}
+
+/* Animacija kada korisnik klikne na logo */
+.navbar-logo:active {
+    background-color: yellow;
+    /* Pozadina postaje žuta prilikom klika */
+    transform: scale(1.1);
+    /* Malo uvećanje loga */
+}
+
+/* Animacija za meni stavke */
+.navbar-item {
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    /* Dodajte tranziciju za animaciju */
+}
+
+/* Promjena boje pri hoveru */
+.navbar-item:hover {
+    background-color: yellow;
+    /* Pozadina postaje žuta */
+    color: black;
+    /* Tekst postaje crn */
+    transform: scale(1.05);
+    /* Meni stavke se malo povećavaju */
+}
+
+/* Animacija pojavljivanja menija */
+.navbar {
+    opacity: 0;
+    /* Početno stanje - prozirno */
+    animation: slideIn 0.5s forwards;
+    /* Animacija pri učitavanju */
+}
+
+/* Definicija keyframe animacije */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Početna pozicija - malo iznad */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Završna pozicija - normalno */
+    }
+}
+
+/* Podmeni efekat */
+.navbar-item:hover .submenu {
+    display: block;
+    /* Pokaži podmeni */
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+    /* Fade in animacija */
+}
+
+/* Animacija za podmeni */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
